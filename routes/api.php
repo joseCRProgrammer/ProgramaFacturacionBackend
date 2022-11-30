@@ -32,5 +32,12 @@ Route::prefix('productos')->group(function () {
     Route::put('',[ App\Http\Controllers\API\ProductosController::class, 'deleteProductos']);
 });
 
+Route::prefix('factura')->group(function () {
+    Route::post('',[ App\Http\Controllers\API\FacturaController::class, 'saveFactura']);
+    Route::post('/reportes',[ App\Http\Controllers\API\FacturaController::class, 'obtainReportes']);
+
+});
+
+
 
 
